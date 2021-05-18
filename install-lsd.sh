@@ -1,6 +1,7 @@
 #!bin/sh
 
-echo "\n####################"
+echo
+echo "####################"
 echo "# Install LSDeluxe #"
 echo "####################"
 
@@ -9,16 +10,18 @@ FILENAME="lsd_${VERSION}_amd64.deb"
 URL="https://github.com/Peltoche/lsd/releases/download/${VERSION}/${FILENAME}"
 
 # Download package
-echo "--> Download package"
+echo -e "-> Download package ...\n"
 
-curl -LO $URL
+curl -LO ${URL}
 
 # Install package
-echo "\n--> Install package"
+echo -e "\n-> Install package ..."
 
-sudo dpkg -i $FILENAME
+sudo dpkg -i ${FILENAME}
 
 # Delete downloaded package
-rm $FILENAME
+echo -e "\n-> Delete downloaded package file"
 
-echo "\n--> Done"
+rm ${FILENAME}
+
+echo -e "\nDone.\n"

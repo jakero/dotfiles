@@ -15,6 +15,7 @@ else
   echo "-> Backup: 'sources.list' to 'sources.list.backup'."
 
   cp "${SOURCES_LIST}" "${SOURCES_LIST_BACKUP}"
+
 fi
 
 # Change repositories
@@ -27,4 +28,4 @@ KAKAO='mirror.kakao.com'
 sed -i -E "s/${ARCHIVE}/${KAKAO}/g" ${SOURCES_LIST}
 sed -i "s/${SECURITY}/${KAKAO}/g" ${SOURCES_LIST}
 
-echo "-> Done.\n"
+echo -e "-> Done.\n"

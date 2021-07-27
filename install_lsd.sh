@@ -1,27 +1,27 @@
-#!bin/bash
+#!/bin/bash
 
 echo
-echo "####################"
-echo "# Install LSDeluxe #"
-echo "####################"
+echo '####################'
+echo '# Install LSDeluxe #'
+echo '####################'
 
 VERSION='0.20.1'
-FILENAME="lsd_${VERSION}_amd64.deb"
-URL="https://github.com/Peltoche/lsd/releases/download/${VERSION}/${FILENAME}"
+PACKAGE="lsd_${VERSION}_amd64.deb"
+URL="https://github.com/Peltoche/lsd/releases/download/${VERSION}/${PACKAGE}"
 
 # Download package
-echo -e "-> Download package ...\n"
+echo -e "-> Download package\n"
 
-curl -LO ${URL}
+curl -LO "${URL}"
 
 # Install package
-echo -e "\n-> Install package ..."
+echo -e "\n-> Install package"
 
-sudo dpkg -i ${FILENAME}
+sudo dpkg -i "${PACKAGE}"
 
 # Delete downloaded package
-echo -e "\n-> Delete downloaded package file"
+echo -e "\n-> Delete downloaded package"
 
-rm ${FILENAME}
+rm "${PACKAGE}"
 
-echo -e "\nDone.\n"
+echo -e "-> Done.\n"

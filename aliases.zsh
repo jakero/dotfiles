@@ -1,3 +1,6 @@
+# Shell
+alias cls=clear
+
 # Git
 alias ga='git add'
 alias gc='git commit -v'
@@ -6,7 +9,7 @@ alias gp='git push'
 alias gst='git status'
 
 # LSDeluxe
-dpkg -s lsd &> /dev/null
+dpkg -s lsd &>/dev/null
 
 if [ $? -eq 0 ]; then
   alias l='lsd -l'
